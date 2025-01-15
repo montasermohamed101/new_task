@@ -11,20 +11,15 @@ class DimensionsInputSection extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text(
-                "حجم الشحنة",
-                style: TextStyle(
-                  color: AppColors.customBlack,
-                  fontWeight: FontWeight.w700,
-                  fontSize: 14,
-                ),
-              ),
-              SvgPicture.asset(Assets.kg_icon),
-            ],
+          const Text(
+            "حجم الشحنة",
+            style: TextStyle(
+              color: AppColors.customBlack,
+              fontWeight: FontWeight.w700,
+              fontSize: 14,
+            ),
           ),
           Row(
             children: [
