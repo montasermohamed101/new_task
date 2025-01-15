@@ -28,7 +28,7 @@ class DimensionsInputSection extends StatelessWidget {
           ),
           Row(
             children: [
-              Expanded(
+              const Expanded(
                 child: CustomTextFormField(
                   hintText: "الطول",
                 ),
@@ -37,7 +37,7 @@ class DimensionsInputSection extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: SvgPicture.asset(Assets.x_icon),
               ),
-              Expanded(
+              const Expanded(
                 child: CustomTextFormField(
                   hintText: "العرض",
                 ),
@@ -46,7 +46,7 @@ class DimensionsInputSection extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: SvgPicture.asset(Assets.x_icon),
               ),
-              Expanded(
+              const Expanded(
                 child: CustomTextFormField(
                   hintText: "الارتفاع",
                 ),

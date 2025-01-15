@@ -9,20 +9,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:responsive_framework/utils/scroll_behavior.dart';
 
-import 'core/stateless/custom_check_box.dart';
-import 'core/stateless/custom_elevated_button.dart';
-import 'core/stateless/custom_gradient_button.dart';
-import 'core/stateless/custom_icon_button.dart';
-import 'core/stateless/custom_location_button.dart';
-import 'core/stateless/custom_radio_tile.dart';
-import 'core/stateless/custom_text_form_field.dart';
-import 'features/home/presentation/city_selector_screen.dart';
+
 import 'features/home/presentation/cubit/home_cubit.dart';
-import 'features/home/presentation/widgets/check_box_section_widget.dart';
-import 'features/home/presentation/widgets/dimensions_input_Section_widget.dart';
-import 'features/home/presentation/widgets/location_button_section_widget.dart';
-import 'features/home/presentation/widgets/switch_option_section_widget.dart';
-import 'features/home/presentation/widgets/weight_input_section_widget.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,7 +25,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<HomeCubit>(
-      create: (context) => context.read<HomeCubit>()..fetchProducts(), // Fetch products on startup
+      create: (context) => context.read<HomeCubit>()..fetchProducts(),
       child: MaterialApp(
         navigatorKey: navigatorKey,
         debugShowCheckedModeBanner: false,
@@ -53,7 +42,7 @@ class MyApp extends StatelessWidget {
         home: MainScreen(),
         builder: (context, child) {
           return Directionality(
-            textDirection: TextDirection.rtl, // Force RTL layout
+            textDirection: TextDirection.rtl,
             child: ResponsiveWrapper.builder(
               ClampingScrollWrapper.builder(context, child!),
               defaultScale: true,

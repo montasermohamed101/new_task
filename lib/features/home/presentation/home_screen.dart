@@ -3,7 +3,6 @@ import 'package:cleancode/features/home/presentation/city_selector_screen.dart';
 import 'package:cleancode/features/home/presentation/cubit/home_cubit.dart';
 import 'package:flutter/material.dart';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -48,10 +47,10 @@ class HomeScreen extends StatelessWidget {
                   final product = products![index];
                   return ListTile(
                     leading: Image.network(
-                      product.thumbnail!, // Fallback image URL
-                      width: 50, // Set the width of the image
-                      height: 50, // Set the height of the image
-                      fit: BoxFit.cover, // Adjust how the image fits within the space
+                      product.thumbnail!,
+                      width: 50,
+                      height: 50,
+                      fit: BoxFit.cover,
                     ),
                     title: Text(product.title ?? 'No Title'),
                     subtitle: Text(product.description ?? 'No Description'),

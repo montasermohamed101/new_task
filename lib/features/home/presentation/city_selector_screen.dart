@@ -98,10 +98,7 @@ class CityStateSelector extends StatelessWidget {
                       const SizedBox(height: 16),
                       DimensionsInputSection(),
                       const SizedBox(height: 16),
-                      SizedBox(
-                        height: 600,
-                        child:    PackagingMaterialsScreen(),
-                      ),
+                      PackagingMaterialsScreen(),
                       const SizedBox(height: 16),
                       Center(
                         child: GradientButton(

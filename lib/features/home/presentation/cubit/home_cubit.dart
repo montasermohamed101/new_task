@@ -3,7 +3,6 @@ import 'package:cleancode/core/network/error/failure.dart';
 import 'package:cleancode/features/home/domain/entities/product_entity.dart';
 import 'package:cleancode/features/home/domain/use_case/get_product_use_case.dart';
 import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
 
 import '../../../../core/base/base_use_case.dart';
 
@@ -14,7 +13,6 @@ class HomeCubit extends Cubit<HomeState> {
 
   HomeCubit(this.getProductUseCase) : super(HomeState());
 
-  // Add cities and states
   final List<String> cities = [
     'الإسكندرية',
     'أسوان',
@@ -33,16 +31,13 @@ class HomeCubit extends Cubit<HomeState> {
     'دمياط': ['منطقة 13', 'منطقة 14', 'منطقة 15'],
   };
 
-  // Add startCity, startState, endCity, endState
   String? startCity;
   String? startState;
   String? endCity;
   String? endState;
 
-  // Add selectedIndex
   int selectedIndex = 0;
 
-  // Add items and icons
   final List<String> items = [
     "تحصيل األموال لقدّا",
     "تحصيل األموال عن طريق الفنيا",
@@ -75,25 +70,23 @@ class HomeCubit extends Cubit<HomeState> {
     Icons.ac_unit_outlined,
   ];
 
-  // Method to update startCity and startState
   void updateStartLocation(String city, String state) {
-    emit(this.state.copyWith( // Use `this.state` to refer to the state of the cubit
+    emit(this.state.copyWith(
       startCity: city,
       startState: state,
     ));
   }
 
   void updateEndLocation(String city, String state) {
-    emit(this.state.copyWith( // Use `this.state` to refer to the state of the cubit
+    emit(this.state.copyWith(
       endCity: city,
       endState: state,
     ));
   }
 
-  // Method to update selectedIndex
   void updateSelectedIndex(int index) {
     selectedIndex = index;
-    emit(state.copyWith()); // Emit a new state to trigger UI update
+    emit(state.copyWith());
   }
 
   Future<void> fetchProducts() async {
